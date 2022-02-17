@@ -1,0 +1,36 @@
+{
+  "name": "elrond-bridge",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/cTJakt/elrond-bridge.git",
+  "author": "cTJakt <21521269@zju.edu.cn>",
+  "license": "MIT",
+  "scripts": {
+    "debug": "nodemon src/index.ts",
+    "start": "node build/src/index.js",
+    "build": "tsc -p ./",
+    "lint": "gts lint",
+    "clean": "gts clean",
+    "compile": "tsc",
+    "fix": "gts fix",
+    "prepare": "yarn run compile",
+    "pretest": "yarn run compile",
+    "posttest": "yarn run lint"
+  },
+  "dependencies": {
+    "@crustio/type-definitions": "1.2.0",
+    "@polkadot/api": "4.2.2-4",
+    "@elrondnetwork/elrond-core-js": "^2.1.0",
+    "@elrondnetwork/erdjs": "^9.0.3",
+    "dotenv": "^8.2.0",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.6",
+    "@types/winston": "^2.4.4",
+    "gts": "^3.1.0",
+    "nodemon": "^2.0.6",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.3"
+  }
+}
